@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+html{
+    scroll-behavior: auto;
+    scroll-padding: 5.5dvh;
+    overflow-x: auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2dvh;
+    padding-bottom: 2dvh;
+    background: crimson;
+    color: rgb(255, 208, 154);
+    position: fixed;
+    width: 100dvw;
+    font-family: 'Times New Roman', Serif;
+    z-index: 98;
+}
+
+section{
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    overflow: hidden;
+    padding-top: 4vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+section#banner{
+    position: relative;
+    z-index: 80;
+    padding: 0;
+    background-color: rgb(37, 0, 0);
+    text-align: center;
+}
+h1{
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 45px ;
+    z-index: 99;
+    text-align: center;
+    top: 25vh;
+    color: palegoldenrod;
+}
+.body{
+    background-size: cover;
+    background-repeat: none;
+}
+
+#sun{
+    background-image: url('gifs/sun.gif');
+    width: 10px;
+    height: 10px;
+    display: flex;
+    flex-direction: column 1px;
+    position: relative;
+    animation: bsunmotion 30s linear infinite;
+}
+@keyframes bsunmotion{
+    0%{
+        transform: translate(-100px , -100px) scale(0.4,0.4);
+    }
+    100%{
+        transform: translate(2500px, 500px) scale(500,500) rotate(180deg);
+    }
+}
+
+#lava{
+    background-image: url('gifs/lava.gif');
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: relative;
+    animation: pplanetmotion 30s infinite;
+}
+@keyframes pplanetmotion{
+    0%{
+        transform: translate(2000px,-100px) scale(10,10);
+    }
+    100%{
+        transform: translate(-700px, -400px) scale(0.1,0.1) rotate(70deg);
+    }
+}
+#gasgas{
+    background-image: url('gifs/gasgas.gif');
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+    animation: bplanetmotion 30s linear infinite;
+}
+@keyframes bplanetmotion{
+    0%{
+        transform: translate(2000px,200px) scale(1,1) rotate(-180deg);
+    }
+    100%{
+        transform: translate(-1000px, 500px) scale(10,10) rotate(100deg);
+    }
+}
+#gas{
+    background-image: url('gifs/gas.gif');
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    position: relative;
+    animation: pgasmotion 30s linear infinite;
+}
+@keyframes pgasmotion{
+    0%{
+        transform: translate(-1000 , 1000px) scale(0.4,0.4);
+    }
+    100%{
+        transform: translate(500px, 100px) scale(3,3) rotate(200deg);
+    }
+}
